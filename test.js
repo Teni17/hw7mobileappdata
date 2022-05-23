@@ -42,6 +42,10 @@ document.addEventListener("DOMContentLoaded", function () {
         createList();
     });
 
+    $(document).on("pagebeforeshow", "#details", function (event) {   
+        let UserID = localStorage.getItem('parm');  // get the unique key back from the storage dictionairy
+        document.getElementById("theUserID").innerHTML = UserID;
+    });
 
 })
 function createList() {
